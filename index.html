@@ -819,8 +819,9 @@
 			function sharePage(e) {
 				e.preventDefault();
 				if (navigator.share) {
-					var image;  document.createElement('image');
+					var image = new Image();
 					var canvas = document.createElement('canvas');
+					image.crossOrigin="anonymous";
 					image.src = 'https://ousmane-ndiaye.github.io/images/profil.png';
 					image.width = 200;
 					image.height = 200;
