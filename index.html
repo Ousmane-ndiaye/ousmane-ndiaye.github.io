@@ -5,11 +5,17 @@
 		<meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Ousmane Ndiaye - CV/Resume">
-        <meta name="keywords" content="developer, developpeur, cv, resume, portfolio, creative, modern">
-        <meta name="author" content="Ousmane Ndiaye">
+        <meta name="description" content="Bonjour! Je suis Ousmane Ndiaye. Concepteur, Développeur Web et Mobile avec plus de 1 ans d’expérience.">
+        <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript, PHP, JAVA, developer, développeur, concepeteur, website, siteweb, cv, resume, portfolio, réalisation, creative, modern">
+		<meta name="robots" content="index, follow">
+		<!-- For sharing -->
+		<meta property="og:image" content="https://ousmane-ndiaye.github.io/images/profil.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1024">
+		<meta property="og:image:height" content="1024">
+		<meta name="author" content="Ousmane Ndiaye">
 		<!-- Page Title -->
-		<title>Ousmane Ndiaye - CV/Resume</title>
+		<title>Ousmane Ndiaye - Réalisations</title>
 		<!-- Styles -->
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -141,28 +147,16 @@
 											<span class="title-links">Social Links</span>
 											<ul class="ul-social-links">
 												<li class="li-social-links">
-													<a href="index.html#" data-tootik="Facebook" data-tootik-conf="square"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+													<a href="https://web.facebook.com/innovdigital/?_rdc=1&_rdr" target="_blank" data-tootik="Facebook" data-tootik-conf="square"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 												</li>
 												<li class="li-social-links">
-													<a href="index.html#" data-tootik="Twitter" data-tootik-conf="square"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+													<a href="https://twitter.com/_ousmaneNdiaye" target="_blank" data-tootik="Twitter" data-tootik-conf="square"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 												</li>
 												<li class="li-social-links">
-													<a href="index.html#" data-tootik="Google Plus" data-tootik-conf="square"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+													<a href="https://www.linkedin.com/in/ousmane-ndiaye/" target="_blank" data-tootik="Linkedin" data-tootik-conf="square"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 												</li>
 												<li class="li-social-links">
-													<a href="index.html#" data-tootik="Linkedin" data-tootik-conf="square"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-												</li>
-												<li class="li-social-links">
-													<a href="index.html#" data-tootik="Dribbble" data-tootik-conf="square"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-												</li>
-												<li class="li-social-links">
-													<a href="index.html#" data-tootik="Pinterest" data-tootik-conf="square"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-												</li>
-												<li class="li-social-links">
-													<a href="index.html#" data-tootik="Vimeo" data-tootik-conf="square"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
-												</li>
-												<li class="li-social-links">
-													<a href="index.html#" data-tootik="Behance" data-tootik-conf="square"><i class="fa fa-behance" aria-hidden="true"></i></a>
+													<a href="https://www.instagram.com/_ousmanendiaye/" target="_blank" data-tootik="Instagram" data-tootik-conf="square"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 												</li>
 											</ul>
 										</div>
@@ -787,12 +781,10 @@
 					</div>
 					<div class="social-links">
 						<ul>
-							<li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="index.html#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="index.html#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="index.html#"><i class="fa fa-pinterest-p"></i></a></li>
-							<li><a href="index.html#"><i class="fa fa-behance"></i></a></li>
+							<li><a href="https://web.facebook.com/innovdigital/?_rdc=1&_rdr" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/_ousmaneNdiaye" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/ousmane-ndiaye/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.instagram.com/_ousmanendiaye/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 						</ul>
 					</div>
 				</section>
@@ -834,7 +826,9 @@
 					})
 					.then(() => console.log('Successful share'))
 					.catch((error) => console.log('Error sharing', error));
-				}
+				}  else {
+					console.log(`Your system doesn't support sharing.`);
+				  }
 			}
 			/**** EasyPieChart Circle Progress ****/
 			$(function() {
