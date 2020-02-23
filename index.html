@@ -825,18 +825,14 @@
 					image.src = 'https://ousmane-ndiaye.github.io/images/profil.png';
 					image.width = 200;
 					image.height = 200;
-					canvas.width = image.width;
-					canvas.height = image.height;
-					canvas.getContext('2d').drawImage(image, 0, 0);
-					canvas.toBlob(blob => navigator.share({
+					navigator.share({
 						title: 'OUSMANE NDIAYE',
 						text: 'Concepteur, Développeur Web & Mobile.',
 						url: document.location.href,
-						blob: blob,
+						image: image,
 						mimeType: 'image/png'
 					}).then(() => console.log('Successful share'))
-						.catch((error) => console.log('Error sharing', error)
-					),'image/png');
+					  .catch((error) => console.log('Error sharing', error));
 				} else {
 					console.log(`Your system doesn't support sharing.`);
 				}
