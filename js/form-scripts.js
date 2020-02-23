@@ -21,8 +21,7 @@ function submitForm(){
         if (error) {
             // The write failed...
             formError();
-            submitMSG(false,text);
-            console.log(error);
+            submitMSG(false, error);
         } else {
             // Data saved successfully!
             formSuccess();
