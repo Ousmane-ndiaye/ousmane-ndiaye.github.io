@@ -77,7 +77,13 @@
 								<div class="photo-profile">
 									<img src="images/profil.png" alt="Robert Smith">
 								</div>
-								<a href="cv/cv-1.pdf" target="cv">
+								<a href="" id="btn-share">
+									<div class="download-resume">
+										<i class="fa fa-share-alt" aria-hidden="true"></i>
+										<span class="text-download">PARTAGER MON PROFIL</span>
+									</div>
+								</a>
+								<a href="cv/cv_ousmanendiaye.pdf" target="cv">
 									<div class="download-resume">
 										<i class="fa fa-cloud-download" aria-hidden="true"></i>
 										<span class="text-download">TÉLÉCHARER MON CV</span>
@@ -816,6 +822,20 @@
 		<script src="js/firebase-init.js"></script>
 
 		<script>
+			var el = document.getElementById("btn-share");
+			el.addEventListener("click", sharePage, false);
+			function sharePage(e) {
+				e.preventDefault();
+				if (navigator.share) {
+					navigator.share({
+					title: 'OUSMANE NDIAYE',
+					text: 'Concepteur, Développeur Web & Mobile.',
+					url: document.location.href,
+					})
+					.then(() => console.log('Successful share'))
+					.catch((error) => console.log('Error sharing', error));
+				}
+			}
 			/**** EasyPieChart Circle Progress ****/
 			$(function() {
 				//circle progress additional skills

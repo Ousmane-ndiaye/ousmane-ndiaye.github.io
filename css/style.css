@@ -422,11 +422,16 @@ ul {
 			}
 
 	.section-about .download-resume {
-		margin-bottom: 25px;
-		padding: 17px 5px;
+		margin-bottom: 15px;
+		padding: 5px;
 		text-align: center;
 		box-shadow: 0 0 5px rgba(0,0,0,.4);
 		transition: all .3s;
+	}
+	
+	#btn-share .download-resume {
+		background-color: #0487cc;
+		color: #ffffff;
 	}
 
 		.section-about .download-resume:hover {
