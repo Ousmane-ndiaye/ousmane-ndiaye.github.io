@@ -123,7 +123,7 @@
 												</li>
 												<li class="li-info">
 													<span class="title-info">Website</span>
-													<span class="info">www.ousmane-ndiaye.github.io</span>
+													<span class="info">ousmane-ndiaye.github.io</span>
 												</li>
 												<li class="li-info">
 													<span class="title-info">Nationalité</span>
@@ -825,17 +825,17 @@
 				<!-- #CONTACT_US# -->
 				<section id="contact-us" class="section section-contact-us wow fadeInUp" data-wow-offset="40">
 					<div class="header-section">
-						<h2 class="h2-section">CONTACT US</h2>
+						<h2 class="h2-section">CONTACT</h2>
 					</div>
 					<div class="row">
 						<div class="col-sm-7">
 							<div class="form-content">
-								<h3>LET'S HAVE A FUN</h3>
-								<form id="contactForm" data-toggle="validator">
-									<input type="text" id="name" placeholder="Name" required>
+								<h3>AYONS DU PLAISIR</h3>
+								<form id="contactForm" data-toggle="validator" autocomplete="off">
+									<input type="text" id="name" placeholder="Prénom et nom" autocomplete="false" required>
 									<input type="email" id="email" placeholder="Email" required>
 									<textarea id="message" placeholder="Message" required></textarea>
-									<input type="submit" id="form-submit" value="SEND">
+									<input type="submit" id="form-submit" value="ENVOYER">
 									<div id="msgSubmit" class="h3 text-center hidden"></div>
             						<div class="clearfix"></div>
 								</form>
@@ -843,22 +843,22 @@
 						</div>
 						<div class="col-sm-5">
 							<div class="info-content">
-								<h3>KEEP IN TOUCHE</h3>
+								<h3>RESTEZ EN TOUCHE</h3>
 								<div class="address">
 									<span class="info-icon"><i class="fa fa-map-marker"></i></span>
-									<span class="info-text">6235, London, Earth, BE 45</span>
+									<span class="info-text">13500, Dakar, Sénégal</span>
 								</div>
 								<div class="email">
 									<span class="info-icon"><i class="fa fa-envelope"></i></span>
-									<span class="info-text">robertsmith@gmail.com</span>
+									<span class="info-text">ousmanendiaye352@gmail.com</span>
 								</div>
 								<div class="telephone">
 									<span class="info-icon"><i class="fa fa-phone"></i></span>
-									<span class="info-text">+123 456 789 012</span>
+									<span class="info-text">+221 77 591 96 86</span>
 								</div>
 								<div class="website">
 									<span class="info-icon"><i class="fa fa-link"></i></span>
-									<span class="info-text">www.robertsmith.com</span>
+									<span class="info-text">ousmane-ndiaye.github.io</span>
 								</div>
 							</div>
 						</div>
@@ -887,18 +887,43 @@
 		<script src="js/validator.min.js"></script>
     	<script src="js/form-scripts.js"></script>
 		<script src="js/script.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+			https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
+	  
 		<script>
-		/**** EasyPieChart Circle Progress ****/
-		$(function() {
-			//circle progress additional skills
-		    $('.chart').easyPieChart({
-		        barColor: '#757575',
-		        trackColor: 'rgba(255,255,255,0)',
-		        scaleColor: 'rgba(255,255,255,0)',
-		        lineWidth: '10',
-		        lineCap: 'square'
-		    });
-		});
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyDV3U9csyEtKp1YHoRjLPe7_VZTKrHr5fg",
+				authDomain: "safhadjj-1554448105825.firebaseapp.com",
+				databaseURL: "https://safhadjj-1554448105825.firebaseio.com",
+				projectId: "safhadjj-1554448105825",
+				storageBucket: "safhadjj-1554448105825.appspot.com",
+				messagingSenderId: "444823317369",
+				appId: "1:444823317369:web:d8ad9f564895c77c72dda8",
+				measurementId: "G-SK46GDWPL3"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+
+			/**** EasyPieChart Circle Progress ****/
+			$(function() {
+				//circle progress additional skills
+				$('.chart').easyPieChart({
+					barColor: '#757575',
+					trackColor: 'rgba(255,255,255,0)',
+					scaleColor: 'rgba(255,255,255,0)',
+					lineWidth: '10',
+					lineCap: 'square'
+				});
+			});
 		</script>
 
 	</body>

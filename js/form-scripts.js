@@ -17,25 +17,22 @@ function submitForm(){
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
-
-    $.ajax({
-        type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
+    firebase.database().ref('contact').push({name: name, email: email, message: message}, function(error) {
+        if (error) {
+            // The write failed...
+            formError();
+            submitMSG(false,text);
+            console.log(error);
+        } else {
+            // Data saved successfully!
+            formSuccess();
         }
     });
 }
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Message envoyer avec succès, merci!")
 }
 
 function formError(){
